@@ -1,0 +1,553 @@
+{
+  "customer": {
+    "module_name": "customer",
+    "prompt": "Create customer API with name, email, phone using fastapi and sqlite",
+    "framework": "fastapi",
+    "database": "sqlite",
+    "fields": [
+      {
+        "name": "name",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "email",
+        "type": "str",
+        "required": true,
+        "unique": true,
+        "description": ""
+      },
+      {
+        "name": "phone",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      }
+    ],
+    "operations": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "target_dir": "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer",
+    "files": [
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer\\database.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer\\models.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer\\schemas.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer\\crud.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer\\main.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer\\test_api.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer\\metadata.json",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer\\__init__.py"
+    ],
+    "status": "validation_failed",
+    "last_validation": {
+      "success": false,
+      "module_name": "customer",
+      "checks": [],
+      "errors": [
+        "Module directory not found: C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\customer"
+      ],
+      "warnings": []
+    },
+    "previous_exists": false
+  },
+  "product_public": {
+    "module_name": "product_public",
+    "prompt": "Create a public product API without authentication using FastAPI and MongoDB with fields name, description, price, inStock, and category; generate read-only endpoints for GET /public/products and GET /public/products/{id}.",
+    "framework": "fastapi",
+    "database": "mongodb",
+    "database_mode": "shared",
+    "tenant_strategy": "shared_collections_with_tenant_id",
+    "template_type": "public_resource",
+    "auth_required": false,
+    "rbac_enabled": false,
+    "fields": [
+      {
+        "name": "name",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "description",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "price",
+        "type": "float",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "inStock",
+        "type": "bool",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "category",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      }
+    ],
+    "operations": [
+      "create",
+      "read"
+    ],
+    "target_dir": "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product_public",
+    "description": "Auto-generated FastAPI backend for product_public",
+    "tenant_aware": true,
+    "route_base": "/product_publics",
+    "collection_name": "product_publics",
+    "files": [
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product_public\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product_public\\metadata.json"
+    ],
+    "generation_mode": "template",
+    "used_llm": false,
+    "status": "generated",
+    "last_validation": null
+  },
+  "category": {
+    "module_name": "category",
+    "prompt": "Create a FastAPI backend module category using MongoDB with fields name, slug, and isActive; generate only these 3 endpoints: GET /categories, POST /categories, and GET /categories/{id}; every record must belong to a tenant using tenant_id.",
+    "framework": "fastapi",
+    "database": "mongodb",
+    "database_mode": "shared",
+    "tenant_strategy": "shared_collections_with_tenant_id",
+    "fields": [
+      {
+        "name": "name",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "slug",
+        "type": "str",
+        "required": true,
+        "unique": true,
+        "description": ""
+      },
+      {
+        "name": "isActive",
+        "type": "bool",
+        "required": true,
+        "unique": false,
+        "description": ""
+      }
+    ],
+    "operations": [
+      "create",
+      "read"
+    ],
+    "target_dir": "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category",
+    "description": "Auto-generated FastAPI backend for category",
+    "tenant_aware": true,
+    "route_base": "/categories",
+    "collection_name": "categories",
+    "files": [
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category\\database.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category\\models.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category\\schemas.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category\\crud.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category\\main.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category\\test_api.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\category\\metadata.json"
+    ],
+    "generation_mode": "template",
+    "used_llm": false,
+    "status": "generated",
+    "last_validation": null
+  },
+  "product": {
+    "module_name": "product",
+    "prompt": "Create a FastAPI backend module product using MongoDB with fields name, description, price, inStock, and category; generate only these 3 endpoints: GET /products, POST /products, and GET /products/{id}; every record must belong to a tenant using tenant_id.",
+    "framework": "fastapi",
+    "database": "mongodb",
+    "database_mode": "shared",
+    "tenant_strategy": "shared_collections_with_tenant_id",
+    "fields": [
+      {
+        "name": "name",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "description",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "price",
+        "type": "float",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "inStock",
+        "type": "bool",
+        "required": true,
+        "unique": false,
+        "description": ""
+      },
+      {
+        "name": "category",
+        "type": "str",
+        "required": true,
+        "unique": false,
+        "description": ""
+      }
+    ],
+    "operations": [
+      "create",
+      "read"
+    ],
+    "target_dir": "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product",
+    "description": "Auto-generated FastAPI backend for product",
+    "tenant_aware": true,
+    "route_base": "/products",
+    "collection_name": "products",
+    "files": [
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product\\__init__.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product\\database.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product\\models.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product\\schemas.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product\\crud.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product\\main.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product\\test_api.py",
+      "C:\\Users\\Asus\\Downloads\\forge_api_advancement_backend\\generated\\backend\\product\\metadata.json"
+    ],
+    "generation_mode": "template",
+    "used_llm": false,
+    "status": "generated",
+    "last_validation": null
+  },
+  "modules": {
+    "auth": {
+      "module_name": "auth",
+      "access_modes": [
+        "auth"
+      ],
+      "template_key": "auth_basic",
+      "display_route": "/auth",
+      "enabled": true
+    },
+    "product": {
+      "module_name": "product",
+      "tenant_id": "890",
+      "database_mode": "same",
+      "database_name": "tenant_890_db",
+      "access_modes": [
+        "public",
+        "rbac"
+      ],
+      "template_keys": [
+        "public_crud_api",
+        "protected_rbac_api"
+      ],
+      "primary_mode": "rbac",
+      "display_route": "/products",
+      "collection_name": "products",
+      "auth_enabled": true,
+      "token_required": true,
+      "rbac_enabled": true,
+      "permissions": {
+        "create": "create_product",
+        "read": "read_product"
+      },
+      "fields": [
+        {
+          "name": "name",
+          "type": "str",
+          "required": true,
+          "unique": false
+        },
+        {
+          "name": "description",
+          "type": "str",
+          "required": false,
+          "unique": false
+        },
+        {
+          "name": "price",
+          "type": "float",
+          "required": true,
+          "unique": false
+        },
+        {
+          "name": "inStock",
+          "type": "bool",
+          "required": true,
+          "unique": false
+        },
+        {
+          "name": "category",
+          "type": "str",
+          "required": false,
+          "unique": false
+        }
+      ]
+    },
+    "category": {
+      "module_name": "category",
+      "tenant_id": "890",
+      "database_mode": "same",
+      "database_name": "tenant_890_db",
+      "access_modes": [
+        "public",
+        "rbac"
+      ],
+      "template_keys": [
+        "public_crud_api",
+        "protected_rbac_api"
+      ],
+      "primary_mode": "rbac",
+      "display_route": "/categories",
+      "collection_name": "categories",
+      "auth_enabled": true,
+      "token_required": true,
+      "rbac_enabled": true,
+      "permissions": {
+        "create": "create_category",
+        "read": "read_category"
+      },
+      "fields": [
+        {
+          "name": "name",
+          "type": "str",
+          "required": true,
+          "unique": false
+        },
+        {
+          "name": "slug",
+          "type": "str",
+          "required": true,
+          "unique": true
+        },
+        {
+          "name": "isActive",
+          "type": "bool",
+          "required": true,
+          "unique": false
+        }
+      ]
+    },
+    "customer": {
+      "module_name": "customer",
+      "access_modes": [
+        "public",
+        "auth"
+      ],
+      "template_keys": [
+        "public_crud_api",
+        "protected_crud_api"
+      ],
+      "primary_mode": "auth",
+      "display_route": "/customers",
+      "collection_name": "customers",
+      "auth_enabled": true,
+      "token_required": true,
+      "rbac_enabled": false,
+      "permissions": {
+        "create": "create_customer",
+        "read": "read_customer"
+      },
+      "fields": [
+        {
+          "name": "name",
+          "type": "str",
+          "required": true,
+          "unique": false
+        },
+        {
+          "name": "email",
+          "type": "str",
+          "required": true,
+          "unique": true
+        }
+      ]
+    },
+    "order": {
+      "module_name": "order",
+      "access_modes": [
+        "public",
+        "rbac"
+      ],
+      "template_keys": [
+        "public_crud_api",
+        "protected_rbac_api"
+      ],
+      "primary_mode": "rbac",
+      "display_route": "/orders",
+      "collection_name": "orders",
+      "auth_enabled": true,
+      "token_required": true,
+      "rbac_enabled": true,
+      "permissions": {
+        "create": "create_order",
+        "read": "read_order"
+      },
+      "fields": [
+        {
+          "name": "orderNumber",
+          "type": "str",
+          "required": true,
+          "unique": true
+        },
+        {
+          "name": "total",
+          "type": "float",
+          "required": true,
+          "unique": false
+        },
+        {
+          "name": "status",
+          "type": "str",
+          "required": true,
+          "unique": false
+        }
+      ]
+    },
+    "inventory": {
+      "module_name": "inventory",
+      "access_modes": [
+        "auth"
+      ],
+      "template_keys": [
+        "protected_crud_api"
+      ],
+      "primary_mode": "auth",
+      "display_route": "/inventories",
+      "collection_name": "inventories",
+      "auth_enabled": true,
+      "token_required": true,
+      "rbac_enabled": false,
+      "permissions": {
+        "create": "create_inventory",
+        "read": "read_inventory"
+      },
+      "fields": [
+        {
+          "name": "sku",
+          "type": "str",
+          "required": true,
+          "unique": true
+        },
+        {
+          "name": "quantity",
+          "type": "int",
+          "required": true,
+          "unique": false
+        }
+      ]
+    },
+    "payment": {
+      "module_name": "payment",
+      "access_modes": [
+        "rbac"
+      ],
+      "template_keys": [
+        "protected_rbac_api"
+      ],
+      "primary_mode": "rbac",
+      "display_route": "/payments",
+      "collection_name": "payments",
+      "auth_enabled": true,
+      "token_required": true,
+      "rbac_enabled": true,
+      "permissions": {
+        "create": "create_payment",
+        "read": "read_payment"
+      },
+      "fields": [
+        {
+          "name": "transactionId",
+          "type": "str",
+          "required": true,
+          "unique": true
+        },
+        {
+          "name": "amount",
+          "type": "float",
+          "required": true,
+          "unique": false
+        },
+        {
+          "name": "status",
+          "type": "str",
+          "required": true,
+          "unique": false
+        }
+      ]
+    },
+    "supplier": {
+      "module_name": "supplier",
+      "tenant_id": "890",
+      "database_mode": "different",
+      "database_name": "tenant_890_supplier_db",
+      "access_modes": [
+        "auth"
+      ],
+      "template_keys": [
+        "protected_crud_api"
+      ],
+      "primary_mode": "auth",
+      "display_route": "/suppliers",
+      "collection_name": "suppliers",
+      "auth_enabled": true,
+      "token_required": true,
+      "rbac_enabled": false,
+      "permissions": {
+        "create": "create_supplier",
+        "read": "read_supplier"
+      },
+      "fields": [
+        {
+          "name": "name",
+          "type": "str",
+          "required": true,
+          "unique": false
+        },
+        {
+          "name": "contactEmail",
+          "type": "str",
+          "required": false,
+          "unique": false
+        },
+        {
+          "name": "phone",
+          "type": "str",
+          "required": false,
+          "unique": false
+        }
+      ]
+    }
+  }
+}

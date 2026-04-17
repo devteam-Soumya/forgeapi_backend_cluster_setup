@@ -1,0 +1,39 @@
+{
+  "module_name": "payment",
+  "access_modes": [
+    "rbac"
+  ],
+  "template_keys": [
+    "protected_rbac_api"
+  ],
+  "primary_mode": "rbac",
+  "display_route": "/payments",
+  "collection_name": "payments",
+  "auth_enabled": true,
+  "token_required": true,
+  "rbac_enabled": true,
+  "permissions": {
+    "create": "create_payment",
+    "read": "read_payment"
+  },
+  "fields": [
+    {
+      "name": "transactionId",
+      "type": "str",
+      "required": true,
+      "unique": true
+    },
+    {
+      "name": "amount",
+      "type": "float",
+      "required": true,
+      "unique": false
+    },
+    {
+      "name": "status",
+      "type": "str",
+      "required": true,
+      "unique": false
+    }
+  ]
+}

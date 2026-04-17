@@ -1,0 +1,56 @@
+{
+  "module_name": "product",
+  "tenant_id": "890",
+  "database_mode": "same",
+  "database_name": "tenant_890_db",
+  "access_modes": [
+    "public",
+    "rbac"
+  ],
+  "template_keys": [
+    "public_crud_api",
+    "protected_rbac_api"
+  ],
+  "primary_mode": "rbac",
+  "display_route": "/products",
+  "collection_name": "products",
+  "auth_enabled": true,
+  "token_required": true,
+  "rbac_enabled": true,
+  "permissions": {
+    "create": "create_product",
+    "read": "read_product"
+  },
+  "fields": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": true,
+      "unique": false
+    },
+    {
+      "name": "description",
+      "type": "str",
+      "required": false,
+      "unique": false
+    },
+    {
+      "name": "price",
+      "type": "float",
+      "required": true,
+      "unique": false
+    },
+    {
+      "name": "inStock",
+      "type": "bool",
+      "required": true,
+      "unique": false
+    },
+    {
+      "name": "category",
+      "type": "str",
+      "required": false,
+      "unique": false
+    }
+  ]
+}

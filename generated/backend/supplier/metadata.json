@@ -1,0 +1,42 @@
+{
+  "module_name": "supplier",
+  "tenant_id": "890",
+  "database_mode": "different",
+  "database_name": "tenant_890_supplier_db",
+  "access_modes": [
+    "auth"
+  ],
+  "template_keys": [
+    "protected_crud_api"
+  ],
+  "primary_mode": "auth",
+  "display_route": "/suppliers",
+  "collection_name": "suppliers",
+  "auth_enabled": true,
+  "token_required": true,
+  "rbac_enabled": false,
+  "permissions": {
+    "create": "create_supplier",
+    "read": "read_supplier"
+  },
+  "fields": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": true,
+      "unique": false
+    },
+    {
+      "name": "contactEmail",
+      "type": "str",
+      "required": false,
+      "unique": false
+    },
+    {
+      "name": "phone",
+      "type": "str",
+      "required": false,
+      "unique": false
+    }
+  ]
+}

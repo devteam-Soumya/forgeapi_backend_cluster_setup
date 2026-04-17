@@ -1,0 +1,33 @@
+{
+  "module_name": "inventory",
+  "access_modes": [
+    "auth"
+  ],
+  "template_keys": [
+    "protected_crud_api"
+  ],
+  "primary_mode": "auth",
+  "display_route": "/inventories",
+  "collection_name": "inventories",
+  "auth_enabled": true,
+  "token_required": true,
+  "rbac_enabled": false,
+  "permissions": {
+    "create": "create_inventory",
+    "read": "read_inventory"
+  },
+  "fields": [
+    {
+      "name": "sku",
+      "type": "str",
+      "required": true,
+      "unique": true
+    },
+    {
+      "name": "quantity",
+      "type": "int",
+      "required": true,
+      "unique": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "module_name": "customer",
+  "access_modes": [
+    "public",
+    "auth"
+  ],
+  "template_keys": [
+    "public_crud_api",
+    "protected_crud_api"
+  ],
+  "primary_mode": "auth",
+  "display_route": "/customers",
+  "collection_name": "customers",
+  "auth_enabled": true,
+  "token_required": true,
+  "rbac_enabled": false,
+  "permissions": {
+    "create": "create_customer",
+    "read": "read_customer"
+  },
+  "fields": [
+    {
+      "name": "name",
+      "type": "str",
+      "required": true,
+      "unique": false
+    },
+    {
+      "name": "email",
+      "type": "str",
+      "required": true,
+      "unique": true
+    }
+  ]
+}
